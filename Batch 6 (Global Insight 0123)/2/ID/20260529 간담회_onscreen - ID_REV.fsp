@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project name="20260529 간담회_onscreen - ID_REV" id="1DCFD2659948DAE">
+  <sync operator="" comment="" />
+  <translation operator="" comment="" />
+  <media lastFileName="" />
+  <style fontFamily="맑은 고딕, 굴림, Arial" fontSize="18" bold="1" color="white" align="CC" />
+  <language>
+    <lc code="koKR">한국어</lc>
+    <lc code="enGB">영어(영국)</lc>
+  </language>
+  <subtitle>
+    <N i="0:00:00.601" o="0:00:02.006">
+      <T g="koKR">Meeting the leaders of CJ Foods US Office</T>
+      <T g="enGB">Rapat dengan para pemimpin CJ Foods US Office</T>
+    </N>
+    <N i="0:00:02.007" o="0:00:03.537">
+      <T g="koKR">who are at the frontline|of new challenges and transformation</T>
+      <T g="enGB">yang berada di garis depan|berbagai tantangan dan transformasi baru</T>
+    </N>
+    <N i="0:00:03.971" o="0:00:06.373">
+      <T g="koKR">Sharing goals and initiatives for growth</T>
+      <T g="enGB">Berbagi tujuan dan inisiatif untuk pertumbuhan</T>
+    </N>
+    <N i="0:00:06.373" o="0:00:08.141">
+      <T g="koKR">and a vision for the future|to be realized together as one team</T>
+      <T g="enGB">serta visi masa depan|yang akan diwujudkan bersama sebagai satu tim</T>
+    </N>
+    <N i="0:00:08.141" o="0:00:10.811">
+      <T g="koKR">Let's take a look at these special moments</T>
+      <T g="enGB">Mari kita simak momen-momen spesial ini</T>
+    </N>
+    <N i="0:00:11.411" o="0:00:16.984">
+      <T g="koKR">Federico Arreola|Head of Asian Cuisine</T>
+      <T g="enGB">Federico Arreola|Kepala Divisi Masakan Asia</T>
+    </N>
+    <N i="0:01:27.521" o="0:01:33.393">
+      <T g="koKR">Robert Dircks|Head of Food Service</T>
+      <T g="enGB">Robert Dircks|Kepala Divisi Food Service</T>
+    </N>
+    <N i="0:03:17.497" o="0:03:23.804">
+      <T g="koKR">Tyler Bolinger|Head of Pizza &amp; Specialty</T>
+      <T g="enGB">Tyler Bolinger|Kepala Divisi Pizza &amp; Specialty</T>
+    </N>
+    <N i="0:04:07.481" o="0:04:14.288">
+      <T g="koKR">Stacey Fowler|Head of R&amp;D</T>
+      <T g="enGB">Stacey Fowler|Kepala Divisi R&amp;D</T>
+    </N>
+    <N i="0:05:52.586" o="0:05:59.760">
+      <T g="koKR">Doug Herrington|Head of Retail Sales</T>
+      <T g="enGB">Doug Herrington|Kepala Divisi Penjualan Ritel</T>
+    </N>
+    <N i="0:06:28.222" o="0:06:34.461">
+      <T g="koKR">Mark Carter|Head of Global Supply Chain</T>
+      <T g="enGB">Mark Carter|Kepala Divisi Global Supply Chain</T>
+    </N>
+    <N i="0:07:44.164" o="0:07:49.336">
+      <T g="koKR">Kari Ziemer|CHRO</T>
+      <T g="enGB">Kari Ziemer|CHRO</T>
+    </N>
+  </subtitle>
+</project>

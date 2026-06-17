@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project name="20260606_미국 현장경영_식품미주본부_onscreen_ID" id="1DCFD263F4B1EB7">
+  <sync operator="" comment="" />
+  <translation operator="" comment="" />
+  <media lastFileName="" />
+  <style fontFamily="맑은 고딕, 굴림, Arial" fontSize="18" bold="1" color="white" align="CC" />
+  <language>
+    <lc code="koKR">한국어</lc>
+    <lc code="enGB">영어(영국)</lc>
+  </language>
+  <subtitle>
+    <N i="0:00:30.831" o="0:00:35.435">
+      <T g="koKR">Global Insights from the Field in the US:|One-Team Synergy for Global Growth</T>
+      <T g="enGB">Global Insights from the Field di AS:|Sinergi Satu Tim untuk Pertumbuhan Global</T>
+    </N>
+    <N i="0:00:36.570" o="0:00:42.309">
+      <T g="koKR">Federico Arreola|CJ Foods US Head of Asian Cuisine</T>
+      <T g="enGB">Federico Arreola|Kepala Divisi Masakan Asia CJ Foods US</T>
+    </N>
+    <N i="0:00:53.587" o="0:00:59.259">
+      <T g="koKR">Robert Dircks|CJ Foods US Head of Food Service</T>
+      <T g="enGB">Robert Dircks|Kepala Divisi Food Service CJ Foods US</T>
+    </N>
+    <N i="0:01:06.600" o="0:01:10.337">
+      <T g="koKR">Stacey Fowler|CJ Foods US Head of R&amp;D</T>
+      <T g="enGB">Stacey Fowler|Kepala Divisi R&amp;D CJ Foods US</T>
+    </N>
+    <N i="0:01:20.914" o="0:01:26.553">
+      <T g="koKR">Stacey Fowler|CJ Foods US Head of R&amp;D</T>
+      <T g="enGB">Stacey Fowler|Kepala Divisi R&amp;D CJ Foods US</T>
+    </N>
+    <N i="0:02:34.054" o="0:02:39.726">
+      <T g="koKR">Robert Dircks|CJ Foods US Head Of Food Service</T>
+      <T g="enGB">Robert Dircks|Kepala Divisi Food Service CJ Foods US</T>
+    </N>
+    <N i="0:03:09.590" o="0:03:15.262">
+      <T g="koKR">Mark Carter|CJ Foods US Head of Food Service</T>
+      <T g="enGB">Mark Carter|Kepala Divisi Food Service CJ Foods US</T>
+    </N>
+    <N i="0:05:27.194" o="0:05:32.666">
+      <T g="koKR">Kevin McDonald|CJ Foods US</T>
+      <T g="enGB">Kevin McDonald|CJ Foods US</T>
+    </N>
+    <N i="0:05:40.908" o="0:05:46.380">
+      <T g="koKR">Brian Thompson|CJ Foods US</T>
+      <T g="enGB">Brian Thompson|CJ Foods US</T>
+    </N>
+    <N i="0:05:53.687" o="0:05:59.393">
+      <T g="koKR">Global Insights from the Field in the US:|One-Team Synergy for Global Growth</T>
+      <T g="enGB">Global Insights from the Field di AS:|Sinergi Satu Tim untuk Pertumbuhan Global</T>
+    </N>
+  </subtitle>
+</project>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project name="20260607_미국 현장경영_종합편__onscreen_ID" id="1DCFD222EC1CA9A">
+  <sync operator="" comment="" />
+  <translation operator="" comment="" />
+  <media lastFileName="" />
+  <style fontFamily="맑은 고딕, 굴림, Arial" fontSize="18" bold="1" color="white" align="CC" />
+  <language>
+    <lc code="koKR">한국어</lc>
+    <lc code="enGB">영어(영국)</lc>
+  </language>
+  <subtitle>
+    <N i="0:00:42.576" o="0:00:46.547">
+      <T g="koKR">Global Insights from the Field in the US:|Global Expansion Through the K-Lifestyle</T>
+      <T g="enGB">Global Insights from the Field di AS:|Ekspansi Global Melalui Gaya Hidup Korea</T>
+    </N>
+    <N i="0:01:10.304" o="0:01:18.278">
+      <T g="koKR">OLIVE YOUNG Pasadena|May 29, 2026</T>
+      <T g="enGB">OLIVE YOUNG Pasadena|29 Mei 2026</T>
+    </N>
+    <N i="0:01:42.970" o="0:02:02.589">
+      <T g="koKR">CJ Foods US|May 27, 2026</T>
+      <T g="enGB">CJ Foods US|27 Mei 2026</T>
+    </N>
+    <N i="0:02:15.602" o="0:02:35.822">
+      <T g="koKR">CJ 4DPLEX America|June 3, 2026</T>
+      <T g="enGB">CJ 4DPLEX America|3 Juni 2026</T>
+    </N>
+    <N i="0:03:06.053" o="0:03:10.457">
+      <T g="koKR">Professor Stephen M. Walt|International Affairs, Harvard Kennedy School</T>
+      <T g="enGB">Stephen M. Walt|Dosen Hubungan Internasional, Harvard Kennedy School</T>
+    </N>
+    <N i="0:03:32.713" o="0:03:38.385">
+      <T g="koKR">Jenny Zegler|Principal Strategist, Food &amp; Drink, Mintel</T>
+      <T g="enGB">Jenny Zegler|Kepala Strategi Food &amp; Drink, Mintel</T>
+    </N>
+    <N i="0:03:41.655" o="0:03:47.127">
+      <T g="koKR">Professor Jonah Berger|Marketing, University of Pennsylvania</T>
+      <T g="enGB">Jonah Berger|Dosen Ilmu Pemasaran, University of Pennsylvania</T>
+    </N>
+    <N i="0:04:10.384" o="0:04:26.333">
+      <T g="koKR">CJ Foods US|May 27, 2026</T>
+      <T g="enGB">CJ Foods US|27 Mei 2026</T>
+    </N>
+    <N i="0:04:26.333" o="0:04:41.748">
+      <T g="koKR">CJ 4DPLEX America|June 3, 2026</T>
+      <T g="enGB">CJ 4DPLEX America|3 Juni 2026</T>
+    </N>
+    <N i="0:04:41.748" o="0:04:55.395">
+      <T g="koKR">OLIVE YOUNG Pasadena|May 29, 2026</T>
+      <T g="enGB">OLIVE YOUNG Pasadena|29 Mei 2026</T>
+    </N>
+    <N i="0:05:08.642" o="0:05:13.614">
+      <T g="koKR">Saul|CJ OLIVE YOUNG USA</T>
+      <T g="enGB">Saul|CJ OLIVE YOUNG USA</T>
+    </N>
+    <N i="0:05:19.286" o="0:05:24.591">
+      <T g="koKR">Ian Kelly|CJ 4DPLEX America</T>
+      <T g="enGB">Ian Kelly|CJ 4DPLEX America</T>
+    </N>
+    <N i="0:05:27.361" o="0:05:32.699">
+      <T g="koKR">Brian Thompson|CJ Foods US</T>
+      <T g="enGB">Brian Thompson|CJ Foods US</T>
+    </N>
+    <N i="0:05:42.276" o="0:05:47.214">
+      <T g="koKR">Global Insights from the Field in the US:|Global Expansion Through the K-Lifestyle</T>
+      <T g="enGB">Global Insights from the Field di AS:|Ekspansi Global Melalui Gaya Hidup Korea</T>
+    </N>
+  </subtitle>
+</project>
