@@ -286,7 +286,7 @@ mang tên "12 Days of Giftsmas",
 
 64
 00:03:47,551 --> 00:03:51,060
-trong đó hai người hâm mộ của nhà sáng tạo nội dung của chúng tôi
+trong đó hai nhà sáng tạo nội dung là fan của của chúng tôi
 
 65
 00:03:51,061 --> 00:03:55,426
@@ -533,7 +533,7 @@ gắn kết mọi người lại với nhau
 
 119
 00:07:00,144 --> 00:07:02,864
-và hoàn thành công việc như một đội ngũ thống nhất.
+và hoàn thành công việc như một đội thống nhất.
 
 120
 00:07:02,865 --> 00:07:04,638
@@ -574,4 +574,4 @@ mà chúng tôi vẫn thường thảo luận,
 
 128
 00:07:23,867 --> 00:07:25,569
-và giới thiệu chúng đến toàn đội ngũ.
+và giới thiệu chúng đến toàn đội.
