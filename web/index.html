@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>100 Nghề Nghiệp Chịu Tác Động Của AI</title>
+  <style>
+    :root {
+      --red:    #dc2626;
+      --red-bg: #fef2f2;
+      --red-border: #fca5a5;
+
+      --orange:    #ea580c;
+      --orange-bg: #fff7ed;
+      --orange-border: #fdba74;
+
+      --yellow:    #ca8a04;
+      --yellow-bg: #fefce8;
+      --yellow-border: #fde047;
+
+      --text:    #1e293b;
+      --muted:   #64748b;
+      --surface: #ffffff;
+      --bg:      #f8fafc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1e40af 100%);
+      color: white;
+      padding: 60px 24px 48px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      padding: 4px 16px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 28px;
+      color: rgba(255,255,255,.8);
+      font-size: 15px;
+    }
+    .hero-sources {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+    }
+    .hero-sources span {
+      background: rgba(255,255,255,.12);
+      border-radius: 6px;
+      padding: 4px 12px;
+      color: rgba(255,255,255,.7);
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      background: var(--surface);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .stat {
+      flex: 1;
+      max-width: 200px;
+      padding: 20px 16px;
+      text-align: center;
+      border-right: 1px solid #e2e8f0;
+    }
+    .stat:last-child { border-right: none; }
+    .stat-number {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label { font-size: 13px; color: var(--muted); }
+
+    /* ── LEGEND ── */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      padding: 28px 24px 8px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1.5px solid transparent;
+    }
+    .legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .legend-item.red    { background:var(--red-bg);    border-color:var(--red-border);    color:var(--red);    }
+    .legend-item.orange { background:var(--orange-bg); border-color:var(--orange-border); color:var(--orange); }
+    .legend-item.yellow { background:var(--yellow-bg); border-color:var(--yellow-border); color:var(--yellow); }
+    .legend-dot.red    { background:var(--red); }
+    .legend-dot.orange { background:var(--orange); }
+    .legend-dot.yellow { background:var(--yellow); }
+
+    /* ── SECTION ── */
+    .section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 24px 8px;
+    }
+    .section-header {
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .section-header.red    { background:var(--red-bg);    border:2px solid var(--red-border); }
+    .section-header.orange { background:var(--orange-bg); border:2px solid var(--orange-border); }
+    .section-header.yellow { background:var(--yellow-bg); border:2px solid var(--yellow-border); }
+
+    .section-icon {
+      font-size: 28px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .section-header.red    .section-title { color:var(--red); }
+    .section-header.orange .section-title { color:var(--orange); }
+    .section-header.yellow .section-title { color:var(--yellow); }
+
+    .section-range {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      border-radius: 999px;
+      padding: 2px 12px;
+      margin-bottom: 6px;
+    }
+    .red    .section-range { background:var(--red);    color:white; }
+    .orange .section-range { background:var(--orange); color:white; }
+    .yellow .section-range { background:var(--yellow); color:white; }
+
+    .section-desc { font-size: 14px; color: var(--muted); }
+
+    /* ── LIST ── */
+    .jobs-grid {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    /* ── JOB ROW ── */
+    .job-card {
+      background: var(--surface);
+      padding: 16px 20px;
+      border-bottom: 1px solid #e2e8f0;
+      border-left: 5px solid transparent;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: background .15s;
+    }
+    .job-card:last-child { border-bottom: none; }
+    .job-card:hover { background: #f8fafc; }
+    .job-card.red    { border-left-color: var(--red); }
+    .job-card.orange { border-left-color: var(--orange); }
+    .job-card.yellow { border-left-color: var(--yellow); }
+
+    .job-num {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .job-card.red    .job-num { background:var(--red-bg);    color:var(--red); }
+    .job-card.orange .job-num { background:var(--orange-bg); color:var(--orange); }
+    .job-card.yellow .job-num { background:var(--yellow-bg); color:var(--yellow); }
+
+    .job-body { flex: 1; min-width: 0; }
+    .job-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 2px;
+      line-height: 1.3;
+    }
+    .job-en {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+    .job-reason {
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.55;
+    }
+
+    /* ── FOOTER NOTE ── */
+    .note-box {
+      max-width: 1000px;
+      margin: 24px auto 60px;
+      padding: 0 24px;
+    }
+    .note-inner {
+      background: #f0f9ff;
+      border: 1.5px solid #bae6fd;
+      border-radius: 14px;
+      padding: 22px 24px;
+      font-size: 14px;
+      color: #0369a1;
+      line-height: 1.7;
+    }
+    .note-inner strong { color: #0c4a6e; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 520px) {
+      .stats-bar { flex-wrap: wrap; }
+      .stat { border-right: none; border-bottom: 1px solid #e2e8f0; min-width: 50%; }
+      .jobs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Báo cáo phân tích 2024–2025</div>
+  <h1>100 Nghề Nghiệp Chịu Tác Động Mạnh Nhất Từ AI</h1>
+  <p>Xếp hạng theo mức độ tự động hóa — từ những công việc xử lý thông tin, lặp lại, có quy trình rõ ràng đến những vị trí đòi hỏi tư duy phức tạp.</p>
+  <div class="hero-sources">
+    <span>Microsoft Research</span>
+    <span>OpenAI</span>
+    <span>Anthropic Economic Index</span>
+    <span>WEF – World Economic Forum</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-number" style="color:var(--red)">25</div>
+    <div class="stat-label">Rủi ro cực cao (80–100%)</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number" style="color:var(--orange)">35</div>
+    <div class="stat-label">Rủi ro cao (60–80%)</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number" style="color:var(--yellow)">40</div>
+    <div class="stat-label">Rủi ro trung bình–cao (40–60%)</div>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-item red">
+    <div class="legend-dot red"></div>Nhóm 1 — Rủi ro Cực kỳ cao
+  </div>
+  <div class="legend-item orange">
+    <div class="legend-dot orange"></div>Nhóm 2 — Rủi ro Cao
+  </div>
+  <div class="legend-item yellow">
+    <div class="legend-dot yellow"></div>Nhóm 3 — Rủi ro Trung bình–Cao
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- NHÓM 1 -->
+<!-- ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header red">
+    <div class="section-icon">🔴</div>
+    <div>
+      <div class="section-range">80% – 100% tự động hóa</div>
+      <div class="section-title">Nhóm 1: Rủi ro Cực kỳ cao</div>
+      <div class="section-desc">AI có thể đảm nhận gần như toàn bộ hoặc phần lớn các tác vụ cốt lõi ngay lập tức.</div>
+    </div>
+  </div>
+
+  <div class="jobs-grid">
+
+    <div class="job-card red">
+      <div class="job-num">1</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên nhập liệu</div>
+        <div class="job-en">Data Entry Keyer</div>
+        <div class="job-reason">Công nghệ OCR và RPA tự động trích xuất và nhập dữ liệu nhanh, chính xác hơn con người.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">2</div>
+      <div class="job-body">
+        <div class="job-title">Biên dịch viên văn bản cơ bản</div>
+        <div class="job-en">Translator</div>
+        <div class="job-reason">Các mô hình ngôn ngữ lớn dịch thuật đa ngôn ngữ theo thời gian thực với độ chính xác cao.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">3</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên tiếp thị qua điện thoại</div>
+        <div class="job-en">Telemarketer</div>
+        <div class="job-reason">AI Voice Agent có khả năng gọi điện, tư vấn và chốt đơn tự động theo kịch bản.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">4</div>
+      <div class="job-body">
+        <div class="job-title">Điện thoại viên / Tổng đài viên</div>
+        <div class="job-en">Telephone Operator</div>
+        <div class="job-reason">Hệ thống trả lời tự động định tuyến cuộc gọi không cần con người can thiệp.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">5</div>
+      <div class="job-body">
+        <div class="job-title">Trợ lý pháp lý sơ cấp</div>
+        <div class="job-en">Paralegal</div>
+        <div class="job-reason">AI có khả năng rà soát hàng ngàn văn bản pháp luật, tìm tiền lệ pháp lý trong vài giây.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">6</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên kế toán sơ cấp</div>
+        <div class="job-en">Bookkeeper</div>
+        <div class="job-reason">Các phần mềm tự động hóa việc đối chiếu hóa đơn, chứng từ và ghi sổ kế toán.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">7</div>
+      <div class="job-body">
+        <div class="job-title">Lập trình viên kiểm thử tự động</div>
+        <div class="job-en">QA / Automation Tester</div>
+        <div class="job-reason">AI tự động viết kịch bản test và phát hiện lỗi code hệ thống.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">8</div>
+      <div class="job-body">
+        <div class="job-title">Lập trình viên cơ bản</div>
+        <div class="job-en">Junior Developer / Coder</div>
+        <div class="job-reason">AI có thể tự sinh mã nguồn cho các tính năng cơ bản từ ngôn ngữ tự nhiên.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">9</div>
+      <div class="job-body">
+        <div class="job-title">Người viết nội dung SEO</div>
+        <div class="job-en">SEO Content Writer</div>
+        <div class="job-reason">AI tạo văn bản hàng loạt tối ưu từ khóa trong vài giây.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">10</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên dịch vụ khách hàng trực tuyến</div>
+        <div class="job-en">Online Customer Service Rep</div>
+        <div class="job-reason">Chatbot AI giải quyết 80–90% các câu hỏi thường gặp của khách hàng.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">11</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên soát lỗi chính tả</div>
+        <div class="job-en">Proofreader</div>
+        <div class="job-reason">Công cụ AI kiểm tra ngữ pháp, chính tả và ngữ nghĩa vượt trội.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">12</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên phân loại tài liệu / Lưu trữ hồ sơ</div>
+        <div class="job-en">File Clerk</div>
+        <div class="job-reason">Hệ thống đám mây tự động phân loại và lưu trữ tài liệu thông minh.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">13</div>
+      <div class="job-body">
+        <div class="job-title">Thư ký hành chính</div>
+        <div class="job-en">Administrative Assistant</div>
+        <div class="job-reason">AI tự động lên lịch, quản lý email và sắp xếp lịch họp.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">14</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên đại lý bán vé</div>
+        <div class="job-en">Ticket Agent</div>
+        <div class="job-reason">Hệ thống đặt vé và soát vé tự động hóa hoàn toàn quy trình này.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">15</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên xử lý hồ sơ bảo hiểm</div>
+        <div class="job-en">Insurance Claims Clerk</div>
+        <div class="job-reason">AI duyệt hồ sơ bồi thường dựa trên các điều khoản sẵn có.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">16</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên tính toán chi phí</div>
+        <div class="job-en">Cost Estimator</div>
+        <div class="job-reason">Thuật toán xử lý số liệu dự toán xây dựng / sản xuất nhanh chóng.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">17</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên ngân hàng tại quầy</div>
+        <div class="job-en">Bank Teller</div>
+        <div class="job-reason">Mobile banking và cây ATM thông minh thay thế hầu hết giao dịch trực tiếp.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">18</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên chuẩn bị tờ khai thuế</div>
+        <div class="job-en">Tax Preparer</div>
+        <div class="job-reason">Phần mềm tự động hóa việc khai báo thuế cá nhân và doanh nghiệp nhỏ.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">19</div>
+      <div class="job-body">
+        <div class="job-title">Người gõ văn bản từ giọng nói</div>
+        <div class="job-en">Transcriptionist</div>
+        <div class="job-reason">Công nghệ Speech-to-Text đạt độ chính xác tuyệt đối.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">20</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên kiểm kê kho tự động</div>
+        <div class="job-en">Inventory Clerk</div>
+        <div class="job-reason">Hệ thống quản lý kho thông minh tích hợp AI và IoT.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">21</div>
+      <div class="job-body">
+        <div class="job-title">Biên tập viên hình ảnh / video cơ bản</div>
+        <div class="job-en">Basic Photo / Video Editor</div>
+        <div class="job-reason">Công cụ AI tự động cắt ghép, chỉnh sửa chỉ bằng câu lệnh văn bản.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">22</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên phân tích tín dụng sơ cấp</div>
+        <div class="job-en">Credit Analyst</div>
+        <div class="job-reason">AI chấm điểm tín dụng dựa trên lịch sử tài chính của khách hàng.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">23</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên điều phối giao vận</div>
+        <div class="job-en">Dispatching Clerk</div>
+        <div class="job-reason">Thuật toán tự động tối ưu hóa lộ trình giao nhận hàng.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">24</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên soát chứng từ xuất nhập khẩu</div>
+        <div class="job-en">Customs Broker Clerk</div>
+        <div class="job-reason">Hệ thống quét và thông quan tự động dựa trên AI dữ liệu.</div>
+      </div>
+    </div>
+
+    <div class="job-card red">
+      <div class="job-num">25</div>
+      <div class="job-body">
+        <div class="job-title">Thư ký y khoa / Nhập hồ sơ bệnh án</div>
+        <div class="job-en">Medical Secretary</div>
+        <div class="job-reason">AI nghe hội thoại của bác sĩ và tự động điền thông tin vào bệnh án điện tử.</div>
+      </div>
+    </div>
+
+  </div><!-- /jobs-grid group 1 -->
+</div><!-- /section group 1 -->
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- NHÓM 2 -->
+<!-- ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header orange">
+    <div class="section-icon">🟠</div>
+    <div>
+      <div class="section-range">60% – 80% tự động hóa</div>
+      <div class="section-title">Nhóm 2: Rủi ro Cao</div>
+      <div class="section-desc">Đòi hỏi một số kỹ năng phân tích hoặc sáng tạo cơ bản, nhưng AI đang tiến bộ rất nhanh và có thể đảm nhiệm phần lớn khối lượng công việc.</div>
+    </div>
+  </div>
+
+  <div class="jobs-grid">
+
+    <div class="job-card orange">
+      <div class="job-num">26</div>
+      <div class="job-body">
+        <div class="job-title">Nhà viết kịch bản quảng cáo cơ bản</div>
+        <div class="job-en">Copywriter</div>
+        <div class="job-reason">AI tạo ra hàng trăm ý tưởng tiêu đề và nội dung quảng cáo ngắn chỉ trong vài phút.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">27</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên hỗ trợ kỹ thuật CNTT cấp 1</div>
+        <div class="job-en">IT Helpdesk Tier 1</div>
+        <div class="job-reason">AI tự động chẩn đoán và khắc phục các lỗi phần mềm phổ biến.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">28</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên phân tích thị trường sơ cấp</div>
+        <div class="job-en">Market Research Analyst</div>
+        <div class="job-reason">AI thu thập và tổng hợp báo cáo xu hướng từ Internet.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">29</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên lọc hồ sơ tuyển dụng</div>
+        <div class="job-en">HR Sourcing Specialist</div>
+        <div class="job-reason">AI quét CV và đánh giá ứng viên phù hợp theo tiêu chí.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">30</div>
+      <div class="job-body">
+        <div class="job-title">Kỹ sư lập trình máy CNC</div>
+        <div class="job-en">CNC Tool Programmer</div>
+        <div class="job-reason">Phần mềm tự động chuyển đổi bản vẽ 3D thành mã lệnh cho máy công nghiệp.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">31</div>
+      <div class="job-body">
+        <div class="job-title">Người dẫn chương trình bản tin</div>
+        <div class="job-en">Broadcast Announcer</div>
+        <div class="job-reason">MC ảo (AI Avatar) có giọng nói và ngoại hình tự nhiên như thật.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">32</div>
+      <div class="job-body">
+        <div class="job-title">Đại lý du lịch</div>
+        <div class="job-en">Travel Agent</div>
+        <div class="job-reason">Người dùng tự lên lịch trình thông qua các trợ lý AI cá nhân hóa.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">33</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên thẩm định bảo hiểm</div>
+        <div class="job-en">Insurance Underwriter</div>
+        <div class="job-reason">Thuật toán đánh giá mức độ rủi ro và xác định mức phí của khách hàng.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">34</div>
+      <div class="job-body">
+        <div class="job-title">Nhà phân tích tài chính cấp thấp</div>
+        <div class="job-en">Financial Analyst</div>
+        <div class="job-reason">AI chạy mô hình dự báo và tạo báo cáo định kỳ.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">35</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên tối ưu hóa công cụ tìm kiếm</div>
+        <div class="job-en">SEO Specialist</div>
+        <div class="job-reason">Các thuật toán tự động theo dõi và đề xuất tối ưu on-page / off-page.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">36</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên thiết kế đồ họa 2D cơ bản</div>
+        <div class="job-en">Junior Graphic Designer</div>
+        <div class="job-reason">AI tạo ảnh (Midjourney, Stable Diffusion) sản xuất hình ảnh minh họa nhanh chóng.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">37</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên quản trị mạng sơ cấp</div>
+        <div class="job-en">Network Administrator</div>
+        <div class="job-reason">AI tự động giám sát hệ thống và phát hiện sự cố bảo mật.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">38</div>
+      <div class="job-body">
+        <div class="job-title">Trợ giảng chấm bài trực tuyến</div>
+        <div class="job-en">Online Grader</div>
+        <div class="job-reason">AI chấm điểm các bài thi tự luận hoặc trắc nghiệm dựa trên đáp án mẫu.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">39</div>
+      <div class="job-body">
+        <div class="job-title">Người làm khảo sát thị trường</div>
+        <div class="job-en">Survey Researcher</div>
+        <div class="job-reason">Chatbot tự động thực hiện phỏng vấn và thu thập ý kiến người tiêu dùng.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">40</div>
+      <div class="job-body">
+        <div class="job-title">Trợ lý nghiên cứu học thuật</div>
+        <div class="job-en">Research Assistant</div>
+        <div class="job-reason">AI tổng hợp tài liệu, trích dẫn tài liệu tham khảo cho các luận văn.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">41</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên thẩm định giá tài sản</div>
+        <div class="job-en">Appraiser</div>
+        <div class="job-reason">AI phân tích dữ liệu thị trường để định giá bất động sản, xe cộ.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">42</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên lễ tân khách sạn</div>
+        <div class="job-en">Hotel Front Desk Clerk</div>
+        <div class="job-reason">Hệ thống check-in tự động qua nhận diện khuôn mặt và mã QR.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">43</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên thanh toán hóa đơn</div>
+        <div class="job-en">Billing Clerk</div>
+        <div class="job-reason">Tự động hóa quy trình đối chiếu công nợ doanh nghiệp.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">44</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên thư viện</div>
+        <div class="job-en">Library Assistant</div>
+        <div class="job-reason">Hệ thống số hóa và quản lý mượn trả tự động.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">45</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên kiểm toán nội bộ sơ cấp</div>
+        <div class="job-en">Junior Auditor</div>
+        <div class="job-reason">AI quét toàn bộ giao dịch để tìm ra điểm bất thường thay vì lấy mẫu thủ công.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">46</div>
+      <div class="job-body">
+        <div class="job-title">Nhà thống kê học ứng dụng</div>
+        <div class="job-en">Statistician</div>
+        <div class="job-reason">Các mô hình máy học tự động xử lý các tập dữ liệu lớn.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">47</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên quản lý Fanpage dạng lặp lại</div>
+        <div class="job-en">Social Media Coordinator</div>
+        <div class="job-reason">AI tự động lên lịch đăng bài và trả lời comment.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">48</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên thu mua nguyên vật liệu</div>
+        <div class="job-en">Purchasing Agent</div>
+        <div class="job-reason">AI tính toán lượng hàng tồn kho và tự động đặt hàng nhà cung cấp.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">49</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên thiết kế slide thuyết trình</div>
+        <div class="job-en">Presentation Designer</div>
+        <div class="job-reason">AI tạo layout và nội dung slide chỉ từ một văn bản thô.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">50</div>
+      <div class="job-body">
+        <div class="job-title">Người vẽ minh họa kỹ thuật số</div>
+        <div class="job-en">Digital Illustrator</div>
+        <div class="job-reason">AI tạo ra các bức vẽ theo đúng phong cách yêu cầu của khách hàng.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">51</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên điều phối cứu hộ</div>
+        <div class="job-en">Emergency Dispatcher</div>
+        <div class="job-reason">AI tiếp nhận cuộc gọi, phân tích mức độ khẩn cấp và định vị vị trí.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">52</div>
+      <div class="job-body">
+        <div class="job-title">Kỹ thuật viên chẩn đoán hình ảnh sơ cấp</div>
+        <div class="job-en">Radiologic Technician</div>
+        <div class="job-reason">AI hỗ trợ khoanh vùng tổn thương trên ảnh X-quang / MRI nhanh chóng.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">53</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên định giá bảo hiểm</div>
+        <div class="job-en">Actuary (routine tasks)</div>
+        <div class="job-reason">AI xử lý các bài toán xác suất rủi ro cơ bản.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">54</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên quản lý đơn hàng TMĐT</div>
+        <div class="job-en">E-commerce Order Manager</div>
+        <div class="job-reason">Hệ thống tự động xử lý từ khâu đặt hàng đến đóng gói.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">55</div>
+      <div class="job-body">
+        <div class="job-title">Kỹ thuật viên phòng thí nghiệm nhập mẫu</div>
+        <div class="job-en">Lab Technician</div>
+        <div class="job-reason">Robot tự động hóa việc pha chế và phân tích mẫu thử.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">56</div>
+      <div class="job-body">
+        <div class="job-title">Người viết tài liệu kỹ thuật</div>
+        <div class="job-en">Technical Writer</div>
+        <div class="job-reason">AI chuyển đổi mã nguồn hoặc bản vẽ kỹ thuật thành hướng dẫn sử dụng.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">57</div>
+      <div class="job-body">
+        <div class="job-title">Người quản lý cơ sở dữ liệu</div>
+        <div class="job-en">Database Administrator</div>
+        <div class="job-reason">AI tự động tối ưu hóa câu lệnh SQL và sao lưu dữ liệu.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">58</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên tính lương</div>
+        <div class="job-en">Payroll Clerk</div>
+        <div class="job-reason">Phần mềm tự động chấm công, tính thuế và chuyển khoản lương.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">59</div>
+      <div class="job-body">
+        <div class="job-title">Người môi giới bất động sản phân khúc thấp</div>
+        <div class="job-en">Real Estate Broker</div>
+        <div class="job-reason">Khách hàng xem nhà qua VR và chốt hợp đồng trực tuyến qua app.</div>
+      </div>
+    </div>
+
+    <div class="job-card orange">
+      <div class="job-num">60</div>
+      <div class="job-body">
+        <div class="job-title">Phóng viên đưa tin tức ngắn</div>
+        <div class="job-en">News Reporter (short briefs)</div>
+        <div class="job-reason">AI tự động tổng hợp tin tức thể thao, tài chính từ các nguồn và viết bài tức thì.</div>
+      </div>
+    </div>
+
+  </div><!-- /jobs-grid group 2 -->
+</div><!-- /section group 2 -->
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- NHÓM 3 -->
+<!-- ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header yellow">
+    <div class="section-icon">🟡</div>
+    <div>
+      <div class="section-range">40% – 60% tự động hóa</div>
+      <div class="section-title">Nhóm 3: Rủi ro Trung bình – Cao</div>
+      <div class="section-desc">Đòi hỏi tư duy phản biện, kỹ năng giải quyết vấn đề phức tạp hoặc sự tương tác trực tiếp của con người, nhưng AI đóng vai trò như một trợ lý cực mạnh làm giảm đáng kể số lượng nhân sự cần thiết.</div>
+    </div>
+  </div>
+
+  <div class="jobs-grid">
+
+    <div class="job-card yellow">
+      <div class="job-num">61</div>
+      <div class="job-body">
+        <div class="job-title">Nhà toán học ứng dụng</div>
+        <div class="job-en">Mathematician</div>
+        <div class="job-reason">AI chứng minh các định lý hoặc giải các phương trình siêu phức tạp.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">62</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên phân tích rủi ro tài chính</div>
+        <div class="job-en">Financial Risk Analyst</div>
+        <div class="job-reason">AI mô phỏng các kịch bản khủng hoảng thị trường.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">63</div>
+      <div class="job-body">
+        <div class="job-title">Thiết kế giao diện web dựa trên mẫu</div>
+        <div class="job-en">UI / UX Designer</div>
+        <div class="job-reason">AI tự động tạo ra các bộ giao diện chuẩn UI/UX từ bản phác thảo tay.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">64</div>
+      <div class="job-body">
+        <div class="job-title">Biên kịch truyện tranh / hoạt hình</div>
+        <div class="job-en">Storyboard Writer</div>
+        <div class="job-reason">AI hỗ trợ lên khung kịch bản phân cảnh nhanh chóng.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">65</div>
+      <div class="job-body">
+        <div class="job-title">Nhà phân tích chính sách công</div>
+        <div class="job-en">Public Policy Analyst</div>
+        <div class="job-reason">AI mô phỏng tác động của các điều luật lên xã hội.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">66</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên quan hệ công chúng sơ cấp</div>
+        <div class="job-en">PR Specialist</div>
+        <div class="job-reason">AI viết các thông cáo báo chí tiêu chuẩn.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">67</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên tư vấn tuyển sinh</div>
+        <div class="job-en">Admissions Counselor</div>
+        <div class="job-reason">Chatbot thông minh tư vấn lộ trình học và học phí.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">68</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên lập kế hoạch sự kiện</div>
+        <div class="job-en">Event Planner</div>
+        <div class="job-reason">AI hỗ trợ tìm nhà cung cấp, tối ưu chi phí và sắp xếp lịch trình.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">69</div>
+      <div class="job-body">
+        <div class="job-title">Giáo viên dạy ngoại ngữ cơ bản</div>
+        <div class="job-en">Language Teacher</div>
+        <div class="job-reason">Các ứng dụng AI giao tiếp như người bản xứ sửa lỗi phát âm trực tiếp.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">70</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên tư vấn tài chính cá nhân</div>
+        <div class="job-en">Financial Advisor</div>
+        <div class="job-reason">Robo-advisor tự động quản lý danh mục đầu tư theo khẩu vị rủi ro.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">71</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên huấn luyện kỹ năng mềm</div>
+        <div class="job-en">Online Coach</div>
+        <div class="job-reason">Các ứng dụng AI tương tác đưa ra lời khuyên theo kịch bản tâm lý.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">72</div>
+      <div class="job-body">
+        <div class="job-title">Tiếp viên hàng không (phần thủ tục / thông báo)</div>
+        <div class="job-en">Flight Attendant</div>
+        <div class="job-reason">Màn hình và robot hỗ trợ hướng dẫn an toàn bay.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">73</div>
+      <div class="job-body">
+        <div class="job-title">Quản lý cửa hàng bán lẻ</div>
+        <div class="job-en">Store Manager</div>
+        <div class="job-reason">AI dự báo sức mua, quản lý nhân sự và tối ưu doanh thu.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">74</div>
+      <div class="job-body">
+        <div class="job-title">Kiểm soát viên không lưu</div>
+        <div class="job-en">Air Traffic Controller</div>
+        <div class="job-reason">AI hỗ trợ tính toán quỹ đạo bay để tránh va chạm.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">75</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên thu hồi nợ</div>
+        <div class="job-en">Debt Collector</div>
+        <div class="job-reason">Hệ thống tự động gửi tin nhắn, gọi điện nhắc nợ theo kịch bản tâm lý.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">76</div>
+      <div class="job-body">
+        <div class="job-title">Kỹ sư thiết kế cơ khí sơ cấp</div>
+        <div class="job-en">CAD Operator</div>
+        <div class="job-reason">AI đề xuất các thiết kế cơ khí tối ưu về vật liệu và độ bền (Generative Design).</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">77</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên hỗ trợ pháp lý tại tòa án</div>
+        <div class="job-en">Court Clerk</div>
+        <div class="job-reason">Hệ thống tự động ghi âm và chuyển thành biên bản phiên tòa.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">78</div>
+      <div class="job-body">
+        <div class="job-title">Nhà nghiên cứu kinh tế</div>
+        <div class="job-en">Economic Researcher</div>
+        <div class="job-reason">AI xử lý và phân tích các mô hình kinh tế vĩ mô lớn.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">79</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên điều tra lý lịch</div>
+        <div class="job-en">Background Investigator</div>
+        <div class="job-reason">AI quét sạch lịch sử số và thông tin công khai của một cá nhân.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">80</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên phân tích hệ thống máy tính</div>
+        <div class="job-en">Computer Systems Analyst</div>
+        <div class="job-reason">AI đưa ra giải pháp nâng cấp hạ tầng CNTT tối ưu.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">81</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên tối ưu hóa quy trình vận hành</div>
+        <div class="job-en">Operations Research Analyst</div>
+        <div class="job-reason">AI giải các bài toán quy hoạch tuyến tính phức tạp.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">82</div>
+      <div class="job-body">
+        <div class="job-title">Trợ lý phát triển sản phẩm</div>
+        <div class="job-en">Product Manager Assistant</div>
+        <div class="job-reason">AI tổng hợp feedback của người dùng để cải tiến sản phẩm.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">83</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên điều phối chuỗi cung ứng</div>
+        <div class="job-en">Supply Chain Coordinator</div>
+        <div class="job-reason">AI kết nối thông tin giữa các nhà xe, kho bãi.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">84</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên quản lý rủi ro tuân thủ</div>
+        <div class="job-en">Compliance Officer</div>
+        <div class="job-reason">AI quét các hoạt động của công ty để đảm bảo đúng luật.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">85</div>
+      <div class="job-body">
+        <div class="job-title">Biên tập viên sách</div>
+        <div class="job-en">Book Editor</div>
+        <div class="job-reason">AI hỗ trợ sửa cấu trúc câu, phát triển ý tưởng cốt truyện.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">86</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên phân tích tâm lý người tiêu dùng</div>
+        <div class="job-en">Consumer Behavior Analyst</div>
+        <div class="job-reason">AI đọc vị hành vi mua sắm qua dữ liệu lớn (Big Data).</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">87</div>
+      <div class="job-body">
+        <div class="job-title">Nhiếp ảnh gia chụp sản phẩm thương mại</div>
+        <div class="job-en">Product Photographer</div>
+        <div class="job-reason">AI tạo ra bối cảnh studio ảo 3D đẹp mắt mà không cần chụp thật.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">88</div>
+      <div class="job-body">
+        <div class="job-title">Người thẩm định hồ sơ vay vốn</div>
+        <div class="job-en">Loan Officer</div>
+        <div class="job-reason">AI đưa ra quyết định duyệt vay dựa trên phân tích rủi ro tự động.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">89</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên thiết kế thời trang nhanh</div>
+        <div class="job-en">Fast Fashion Designer</div>
+        <div class="job-reason">AI quét xu hướng mạng xã hội và tạo ra hàng ngàn mẫu quần áo mới.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">90</div>
+      <div class="job-body">
+        <div class="job-title">Kỹ sư âm thanh – khâu Mixing / Mastering</div>
+        <div class="job-en">Audio Engineer</div>
+        <div class="job-reason">Các phần mềm AI tự động cân bằng âm thanh đạt chuẩn phòng thu.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">91</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên kiểm soát chất lượng sản xuất</div>
+        <div class="job-en">QC Inspector</div>
+        <div class="job-reason">Camera AI quét bề mặt sản phẩm để tìm lỗi siêu nhỏ ở tốc độ cao.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">92</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên quản lý tài sản số</div>
+        <div class="job-en">Digital Asset Manager</div>
+        <div class="job-reason">AI tự động gắn tag, phân loại hình ảnh, video trong hệ thống.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">93</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên tư vấn hướng nghiệp</div>
+        <div class="job-en">Career Counselor</div>
+        <div class="job-reason">AI phân tích kỹ năng và gợi ý lộ trình nghề nghiệp phù hợp.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">94</div>
+      <div class="job-body">
+        <div class="job-title">Quản lý dự án CNTT sơ cấp</div>
+        <div class="job-en">Junior Project Manager</div>
+        <div class="job-reason">AI theo dõi tiến độ công việc, tự động nhắc nhở các thành viên.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">95</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên phân tích an ninh mạng cấp 1</div>
+        <div class="job-en">Cybersecurity Analyst L1</div>
+        <div class="job-reason">AI tự động cô lập các mối đe dọa hoặc mã độc vừa xâm nhập.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">96</div>
+      <div class="job-body">
+        <div class="job-title">Kỹ sư mô phỏng môi trường</div>
+        <div class="job-en">Environmental Simulation Engineer</div>
+        <div class="job-reason">AI chạy các mô hình biến đổi khí hậu hoặc ô nhiễm dữ liệu.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">97</div>
+      <div class="job-body">
+        <div class="job-title">Nhân viên quản lý sở hữu trí tuệ / bản quyền</div>
+        <div class="job-en">Copyright Specialist</div>
+        <div class="job-reason">AI quét mạng internet để phát hiện các hành vi vi phạm bản quyền hình ảnh, âm nhạc.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">98</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên khảo sát trắc địa</div>
+        <div class="job-en">Surveyor</div>
+        <div class="job-reason">Drone tích hợp AI tự động quét địa hình và vẽ bản đồ 3D.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">99</div>
+      <div class="job-body">
+        <div class="job-title">Chuyên viên phân tích hiệu suất nhân sự</div>
+        <div class="job-en">HR Analytics Specialist</div>
+        <div class="job-reason">AI đánh giá năng suất và dự đoán tỷ lệ nghỉ việc của nhân viên.</div>
+      </div>
+    </div>
+
+    <div class="job-card yellow">
+      <div class="job-num">100</div>
+      <div class="job-body">
+        <div class="job-title">Nhà khí tượng học dự báo thời tiết</div>
+        <div class="job-en">Meteorologist</div>
+        <div class="job-reason">Hệ thống siêu máy tính tích hợp AI dự báo thời tiết chính xác theo từng giờ.</div>
+      </div>
+    </div>
+
+  </div><!-- /jobs-grid group 3 -->
+</div><!-- /section group 3 -->
+
+
+<!-- NOTE -->
+<div class="note-box">
+  <div class="note-inner">
+    <strong>Lưu ý về khái niệm "thay thế":</strong> Đây không đồng nghĩa với việc toàn bộ ngành nghề đó biến mất 100% ngay lập tức, mà là <strong>AI có thể làm thay phần lớn các tác vụ cốt lõi</strong>. Điều này dẫn đến việc một doanh nghiệp trước đây cần 10 người thì nay chỉ cần 1–2 người biết ứng dụng AI để vận hành công việc tương đương, làm giảm mạnh nhu cầu tuyển dụng nhân sự truyền thống.
+  </div>
+</div>
+
+</body>
+</html>
